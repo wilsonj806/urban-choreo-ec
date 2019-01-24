@@ -1,10 +1,13 @@
 // NOTE below two imports are REQUIRED
 
-import React from 'react';
+import * as React from 'react';
 import { storiesOf } from '@storybook/react';
+// import { Nav } from './components/Nav';
+
 
 // NOTE import the component itself into the storybook index file you want to test
-import { Button } from '@storybook/react/demo';
+// So Node's module.exports, exports an object that you need to call???
+const Button =  require('@storybook/react/demo').Button;
 
 storiesOf('Button', module)
   .add('with text', () => (
@@ -13,3 +16,6 @@ storiesOf('Button', module)
   .add('with some emoji', () => (
     <Button><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
   ));
+
+// storiesOf('Nav', module)
+//     .add('default', () => <Nav></Nav>);
