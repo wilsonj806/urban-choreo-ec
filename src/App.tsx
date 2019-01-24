@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import './stylesheets/App.css';
+import { Nav } from './components/Nav';
 
-const logo = require('./logo.svg') as string;
-
-class App extends Component {
+// const logo = require('./logo.svg') as string;
+// <img src={logo} className="App-logo" alt="logo" />
+export class App extends React.Component<any, any> {
   render() {
     return (
       <div className="App">
+        <Nav/>
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -26,4 +27,4 @@ class App extends Component {
   }
 }
 
-export default App;
+
