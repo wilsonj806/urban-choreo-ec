@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "tslint-clean-code"
+  ],
+  "rules": {
+    "newspaper-order": true
+  },
+  "defaultSeverity": "warning",
+   "linterOptions": {
+     "exclude": [
+       "config/**/*.js",
+       "node_modules/**/*.ts"
+     ]
+  }
+}
