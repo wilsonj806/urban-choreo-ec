@@ -15,16 +15,16 @@ This is a Single Page App mean to be an article/ series of articles describing t
 
 ## Goals
 
-The goal of this project is to gain more familiarity with React, and the related tools relevant to React, by pushing out something fairly basic. Said tools include Storybook, TypeScript, and Jest/ Enzyme.
+The goal of this project is to gain more familiarity with React, and the related tools/ libraries relevant to React, by pushing out a fairly simple Single Page App. Said tools include React Router, Storybook, TypeScript, and Jest/ Enzyme.
 
-In addition, this project is meant to be a one week build to push out the basic layout and functionality. The target release as a result is v0.5.0 which is about the point where all of the appropriate content or placeholders are in, but hasn't been polished an fully refactored yet.
+In addition, this project is meant to be a one week build to push out the basic layout and functionality. The target release as a result is v0.5.0 which is about the point where all of the appropriate content or placeholders are in, but hasn't been polished and fully refactored yet.
 
 ### Roadmap to v0.5.0
 
 **Version 0.25.0 should have the following done**
 - Basic components(buttons, headers, etc)
 - Navigation between different "pages"
-- State handling
+- State handling if any
 
 **Version 0.5.0 should have the following done**
 - CSS and styling
