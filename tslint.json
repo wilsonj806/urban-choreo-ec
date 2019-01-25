@@ -13,12 +13,4 @@
        "node_modules/@types/*"
      ]
   },
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react"
-  },
 }

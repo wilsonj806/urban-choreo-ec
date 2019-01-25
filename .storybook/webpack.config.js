@@ -1,16 +1,42 @@
+// NOTE Babel can transpile TypeScript but can't do everything
+
 const path = require("path");
 const include = path.resolve(__dirname, '../');
 
 module.exports = {
   mode: 'development',
   module: {
-      rules: [
+    rules: [
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
           {
-            test: /\.tsx/,
-            loader: 'babel-loader!ts-loader',
-            exclude: /node_modules/,
-            include
-          }
-      ]
+            loader: 'file-loader',
+            options: {},
+          },
+        ]
+      },
+      {
+        test: /\.tsx/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [['react-app', {flow: false, typescript: true}]]
+            }
+          },
+        /*{
+            loader: 'ts-loader',
+            options: {
+              "compilerOptions": {
+                "noEmit": false
+              }
+            }
+          } */
+        ],
+        exclude: /node_modules/,
+        include
+      },
+    ]
   }
 };

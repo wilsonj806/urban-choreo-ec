@@ -1,9 +1,4 @@
 /* NOTE below two imports are REQUIRED
-ALSO for tsconfig.json you DON'T want
-  {
-  "noemit": true,
-}
-Either remove it or set it to false
 */
 
 import * as React from 'react';
