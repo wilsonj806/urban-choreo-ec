@@ -1,38 +1,58 @@
+/* NOTE reference component
+https://github.com/Shopify/polaris-react/blob/master/src/components/Card/Card.tsx */
+
 import * as React from 'react';
-import { BrowserRouter as BrowserRouter, Route, Link, Prompt } from 'react-router-dom';
 
-import { About } from '../pages/About';
-import { UrbanChoreoEC } from '../pages/UrbanChoreoEC';
-import { Landing } from '../pages/Landing';
-// FIXME Nav is breaking the App because its stuck in an infinite loop
+// TODO Add more type guarding so that you can only put ReactRouter.Link components in
 
-// TODO Move the <Link> component into App.tsx and have placeholders instead for the child of <li>
+interface Props {
+  children: React.ReactNode,
+};
 
-export class Nav extends React.Component<any, any> {
+
+export class Nav extends React.Component<Props, any> {
+  renderListItem() {
+    const { children } = this.props;
+    console.dir(children);
+    if (isUndefinedNull(children)) throw new Error('Expecting children components of some kind');
+    if (isNumBoolStr(children)) {
+      throw new Error(`
+      Expecting children that's a React class component/ function component or a JSX fragment
+      `);
+    }
+    if (children instanceof Array) {
+      const listItems = children.map((reactNode: any, i: number) => {
+        return (
+          <li
+            key={i}
+          >
+            {reactNode}
+          </li>
+        )})
+
+        return listItems;
+    }
+  }
+
   render() {
+    const listItems = this.renderListItem();
     return (
-      <BrowserRouter>
         <>
           <nav>
             <ul>
-              <li>
-                <Link to='/'>Home</Link>
-              </li>
-              <li>
-                <Link to='/about'>About</Link>
-              </li>
-              <li>
-                <Link to='/urban-choreo-east-coast'>Urban Choreo-East Coast</Link>
-              </li>
+              {listItems}
             </ul>
           </nav>
-          <div>
-            <Route exact path="/" component={Landing} />
-            <Route path="/about" component={About} />
-            <Route path="/urban-choreo-east-coast" component={UrbanChoreoEC} />
-          </div>
         </>
-      </BrowserRouter>
     );
   }
+}
+
+
+// Simple type checking
+const isUndefinedNull = (ele: any): ele is null | undefined => {
+  return typeof ele === null || typeof ele === undefined;
+}
+const isNumBoolStr = (ele: any): ele is number | boolean | string=> {
+  return typeof ele === 'number' || typeof ele === 'boolean' || typeof ele === 'string';
 }
