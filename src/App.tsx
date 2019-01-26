@@ -13,7 +13,10 @@ export class App extends React.Component<any, any> {
     return (
       <BrowserRouter>
         <div>
-          <Nav>
+          <Nav
+            id='nav'
+            itemClass='nav__item'
+          >
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
             <Link to='/urban-choreo-east-coast'>Urban Choreo-East Coast</Link>
