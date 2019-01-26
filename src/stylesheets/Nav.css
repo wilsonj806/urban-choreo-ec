@@ -1,0 +1,9 @@
+#nav ul{
+  list-style: none;
+  background: transparent;
+}
+
+.nav__item{
+  display: inline-block;
+  margin: 0 5px;
+}
