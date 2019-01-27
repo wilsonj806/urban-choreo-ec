@@ -19,15 +19,15 @@ import { BrowserRouter as BrowserRouter, Route, Link, Prompt, Switch } from 'rea
 
 const Button =  require('@storybook/react/demo').Button;
 
-storiesOf('Button-Demo', module)
+/* storiesOf('Button-Demo', module)
   .add('with text', () => (
     <Button>Hello Button</Button>
   ))
   .add('with some emoji', () => (
     <Button><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
   ));
-
-storiesOf('Nav', module)
+ */
+storiesOf('Low Level Component/ Nav', module)
   .add('config that throws an error', () => {
     return (
     <Nav
@@ -66,18 +66,18 @@ storiesOf('Nav', module)
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
             <Link to='/urban-choreo-east-coast'>Urban Choreo-East Coast</Link>
+            <Link to='/references'>References</Link>
           </Nav>
         </BrowserRouter>
     )});
 
-storiesOf('App', module)
-  .add('default', () => <App/>);
-
-storiesOf('Card', module)
-  .add('simple', () => <Card>I'm a basic card</Card>)
+storiesOf('Low Level Component/ Card', module)
+  .add('simple', () => <Card className='card--shadow'>I'm a basic card</Card>)
   .add('simple with header', () => {
   return(
-    <Card>
+    <Card
+      className='card--shadow'
+    >
       {{
         header: 'I\'m a card with a header and some content',
         content: (
@@ -96,7 +96,9 @@ storiesOf('Card', module)
   })
   .add('card with header ele and media', () => {
     return(
-      <Card>
+      <Card
+        className='card--shadow'
+      >
         {{
           header: (
             <>
@@ -116,6 +118,60 @@ storiesOf('Card', module)
     )
   });
 
-storiesOf('Section', module)
-  .add('default', () => <Section/>);
+storiesOf('Low Level Component/ Section', module)
+  .add('default', () => {
+    return(
+      <Section
+        className='section--shadow'
+      >
+        content
+      </Section>
+    )
+  })
+  .add('light grey bg', () => {
+    return(
+      <Section
+        className='section--bg-light'
+      >
+        content on a grey bg
+      </Section>
+    )
+  })
+  .add('section with card', () => {
+    return(
+      <Section
+        className='section--bg-light'
+      >
+        <Card
+          className='card--shadow'
+        >
+          {{
+            header: (
+              <>
+                <h2>I'm a fancier card</h2>
+              </>
+            ),
+            media: (
+              <img src='https://material.angular.io/assets/img/examples/shiba2.jpg'></img>
+            ),
+            content: (
+              <>
+                <p>Content here</p>
+              </>
+            )
+          }}
+        </Card>
+      </Section>
+    )
+  });
 
+
+
+storiesOf('App', module)
+  .add('default', () => {
+  return (
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
+  )
+});

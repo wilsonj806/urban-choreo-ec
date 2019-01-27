@@ -36,3 +36,14 @@ In addition, this project is meant to be a one week build to push out the basic 
 
 
 **Version 1.0.0 should have the following done**
+
+## Cloning instructions
+
+You'll need to have some version of Node.js(and subsequently npm, which is included) installed.
+
+Clone the repo with your favorite SCM or manually download it
+```
+git clone https://github.com/wilsonj806/picture-analyzer.git
+```
+
+Change your working directory to the folder of the newly cloned repo and run ```npm install``` in your command line interface.

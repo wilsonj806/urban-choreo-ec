@@ -3,6 +3,7 @@ import React, { ReactChild, ReactNode, Component } from 'react';
 import '../stylesheets/Card.css';
 
 interface Props {
+  className?: string,
   children: React.ReactNode | BasicCard
 };
 
@@ -22,7 +23,7 @@ const isBasicCard = (children: any): children is BasicCard =>
 
 export class Card extends React.Component<Props, any> {
   render() {
-    const { children } = this.props;
+    const { children, className } = this.props;
 
     if (!children) throw new Error('Erorr expecting children elements');
 
@@ -30,7 +31,7 @@ export class Card extends React.Component<Props, any> {
       const { header, content, media, actions } = children;
       return(
         <div
-          className='card'
+          className={`card ${className}`}
         >
         {header ? <div className='card__header'>{header}</div> : null}
         {media ? <div className='card__media'>{media}</div> : null}

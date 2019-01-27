@@ -60,6 +60,7 @@ hi('hi') // expect to return 'hi'
 ## Generics
 
 - [TypeScript Doc Reference](https://www.typescriptlang.org/docs/handbook/generics.html)
+- [External Reference](https://code.tutsplus.com/tutorials/typescript-for-beginners-part-5-generics--cms-29603)
 
 TypeScript also lets you pass through type aliases via generics. A *generic* is one of the main ways that you create reusable components. Generics let you create a component that works over a variety of types rather than a single one. It means instead of specifying the type of argument that a function or object is expecting, inside the function declaration, you can specify it afterwards when you call it.
 - As a result you don't lose type information/ your function is more reusable as its not constrained as hard to a single type input.
