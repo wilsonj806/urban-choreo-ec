@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
+import { LandingCard, LandingShapes } from '../templates/LandingSec';
 import { AboutCard, AboutSec } from '../templates/AboutSec';
 import { WhatIsCard, WhatIsSec } from '../templates/WhatIsUC';
 
@@ -8,6 +9,18 @@ import { WhatIsCard, WhatIsSec } from '../templates/WhatIsUC';
 import { BrowserRouter as BrowserRouter, Route, Link, Prompt, Switch } from 'react-router-dom';
 
 
+
+storiesOf('Mid level Templates/ Landing Section', module)
+  .add('Landing card', () => {
+    return (
+      LandingCard
+    )
+  })
+  .add('Landing Shapes', () => {
+    return (
+      LandingShapes
+    )
+  });
 
 storiesOf('Mid level Templates/ About Section', module)
   .add('About card', () => {

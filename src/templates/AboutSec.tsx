@@ -23,6 +23,7 @@ const AboutCard = (
 const AboutSec = (
   <Section
     className='section--bg-light section--double-col'
+    qtyColumns={2}
   >
     {
       {

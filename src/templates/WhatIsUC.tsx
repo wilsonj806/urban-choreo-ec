@@ -21,7 +21,8 @@ const WhatIsCard = (
 
 const WhatIsSec = (
   <Section
-    className='section--double-col'
+    className='section--double-col-rev'
+    qtyColumns={2}
   >
     {{
       header: ( <h1 className='heading--main'>What Is Urban Choreography?</h1>),

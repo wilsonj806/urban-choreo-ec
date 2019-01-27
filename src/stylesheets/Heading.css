@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.heading--landing{
+  font-size: 1.65rem;
+  text-align: center;
+}
+
 .heading--main{
   width: 100vw;
 }

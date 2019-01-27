@@ -6,13 +6,14 @@ import '../stylesheets/MediaCtr.css';
 
 interface Props {
   className?: string,
-  children: ReactNode
+  children: ReactNode,
+  custom?: boolean
 }
 
 export class MediaCtr extends Component<Props, any>{
   render() {
-    const { className, children } = this.props
-    if (!children || !isContainer<Component>(children, 'type')) throw new Error('Expecting children elements')
+    const { className, children, custom } = this.props
+    if (!children || !isContainer<Component>(children, 'type') && custom !== true ) throw new Error('Expecting children elements')
     return (
       <div
         className={`media ${className}`}

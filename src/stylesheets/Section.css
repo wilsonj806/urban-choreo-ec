@@ -30,10 +30,12 @@
   align-items: center;
 }
 
-.section--grid{
-  display: grid;
+.section--double-col-rev{
+  width: 80%;
+  padding: 0 10%;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.section--flex{
-  display: flex;
-}
