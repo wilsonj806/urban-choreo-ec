@@ -11,8 +11,7 @@ import { Landing } from './pages/Landing';
 export class App extends React.Component<any, any> {
   render() {
     return (
-      <BrowserRouter>
-        <div>
+        <>
           <Nav
             id='nav'
             itemClass='nav__item'
@@ -26,8 +25,7 @@ export class App extends React.Component<any, any> {
             <Route path="/about" component={About} />
             <Route path="/urban-choreo-east-coast" component={UrbanChoreoEC} />
           </div>
-        </div>
-      </BrowserRouter>
+        </>
     );
   }
 }

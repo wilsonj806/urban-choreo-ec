@@ -8,6 +8,8 @@
 
 
 - [**Live Site**]()
+  - Note the page is being developed component by component
+    - to see current progress feel free to clone it and run Storybook
 
 ## Description
 
@@ -47,3 +49,9 @@ git clone https://github.com/wilsonj806/picture-analyzer.git
 ```
 
 Change your working directory to the folder of the newly cloned repo and run ```npm install``` in your command line interface.
+
+### Running Storybook
+
+To run Storybook on the repo, after you clone the repo and install the dependencies, run ```npm run sb```.
+
+Components are listed in the right side bar and lower level components are nested in the corresponding list item.

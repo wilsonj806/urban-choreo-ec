@@ -1,5 +1,7 @@
 /* NOTE reference component
-https://github.com/Shopify/polaris-react/blob/master/src/components/Card/Card.tsx */
+https://github.com/Shopify/polaris-react/blob/master/src/components/Card/Card.tsx
+Docs: https://reacttraining.com/react-router/web/example/auth-workflow
+*/
 
 import * as React from 'react';
 import '../stylesheets/Nav.css';

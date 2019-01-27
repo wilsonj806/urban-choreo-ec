@@ -17,16 +17,6 @@ import { BrowserRouter as BrowserRouter, Route, Link, Prompt, Switch } from 'rea
 // So Node's module.exports, exports an object that you need to call???
 // import { Demo } from '../extra/sample-ts-react/sample';
 
-const Button =  require('@storybook/react/demo').Button;
-
-/* storiesOf('Button-Demo', module)
-  .add('with text', () => (
-    <Button>Hello Button</Button>
-  ))
-  .add('with some emoji', () => (
-    <Button><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
-  ));
- */
 storiesOf('Low Level Component/ Nav', module)
   .add('config that throws an error', () => {
     return (
@@ -97,7 +87,7 @@ storiesOf('Low Level Component/ Card', module)
   .add('card with header ele and media', () => {
     return(
       <Card
-        className='card--shadow'
+        className='card--shadow card--basic'
       >
         {{
           header: (
@@ -140,10 +130,75 @@ storiesOf('Low Level Component/ Section', module)
   .add('section with card', () => {
     return(
       <Section
-        className='section--bg-light'
+        className='section--bg-light '
       >
         <Card
-          className='card--shadow'
+          className='card--shadow card--basic'
+        >
+          {{
+            header: (
+              <>
+                <h2>I'm a fancier card</h2>
+              </>
+            ),
+            media: (
+              <img src='https://material.angular.io/assets/img/examples/shiba2.jpg'></img>
+            ),
+            content: (
+              <>
+                <p>Content here</p>
+              </>
+            )
+          }}
+        </Card>
+      </Section>
+    )
+  })
+  .add('section with cards', () => {
+    return(
+      <Section
+        className='section--bg-light section--one-col'
+      >
+        <Card
+          className='card--shadow card--basic'
+        >
+          {{
+            header: (
+              <>
+                <h2>I'm a fancier card</h2>
+              </>
+            ),
+            media: (
+              <img src='https://material.angular.io/assets/img/examples/shiba2.jpg'></img>
+            ),
+            content: (
+              <>
+                <p>Content here</p>
+              </>
+            )
+          }}
+        </Card>
+        <Card
+          className='card--shadow card--basic'
+        >
+          {{
+            header: (
+              <>
+                <h2>I'm a fancier card</h2>
+              </>
+            ),
+            media: (
+              <img src='https://material.angular.io/assets/img/examples/shiba2.jpg'></img>
+            ),
+            content: (
+              <>
+                <p>Content here</p>
+              </>
+            )
+          }}
+        </Card>
+        <Card
+          className='card--shadow card--basic'
         >
           {{
             header: (
