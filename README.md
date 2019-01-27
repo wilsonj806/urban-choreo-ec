@@ -8,6 +8,8 @@
 
 
 - [**Live Site**]()
+  - Note the page is being developed component by component
+  - to see current progress feel free to clone it and run Storybook
 
 ## Description
 
@@ -24,11 +26,13 @@ In addition, this project is meant to be a one week build to push out the basic 
 **Version 0.25.0 should have the following done**
 - Basic components(buttons, headers, etc)
 - Navigation between different "pages"
-- State handling if any
+- Basic CSS and styling
 
 **Version 0.5.0 should have the following done**
-- CSS and styling
 - Any CSS based shapes as specced out in the mockups
+- Full CSS for each template and page
+- Full templates for each page
+- State handling if any
 
 ## Roadmap to v1.0.0
 
@@ -36,3 +40,25 @@ In addition, this project is meant to be a one week build to push out the basic 
 
 
 **Version 1.0.0 should have the following done**
+
+## Cloning instructions
+
+You'll need to have some version of Node.js(and subsequently npm, which is included) installed. Currently running everything on Node v10.10.0/ NPM v6.4.1 but it should work fine on older versions of Node/ NPM.
+- if you do need to download Node, you can download it through the below links:
+  - [Offical Node site](https://nodejs.org/en/download/)
+  - [Node Version Manager Windows(requires more setup)](https://github.com/coreybutler/nvm-windows)
+  - [Node Version Manager Mac(requires more setup)](https://github.com/creationix/nvm)
+
+
+Clone the repo with your favorite SCM or manually download it
+```
+git clone https://github.com/wilsonj806/picture-analyzer.git
+```
+
+Change your working directory to the folder of the newly cloned repo and run ```npm install``` in your command line interface.
+
+### Running Storybook
+
+To run Storybook on the repo, after you clone the repo and install the dependencies, run ```npm run sb```.
+
+Components are listed in the right side bar and lower level components are nested in the corresponding list item.

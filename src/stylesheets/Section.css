@@ -1,0 +1,39 @@
+.section{
+  width: 100%;
+  min-height: 60vh;
+  padding: 20px 0;
+  margin: 25px 0;
+}
+
+.section--bg-light{
+  background: rgb(235, 235, 235);
+}
+
+.section--shadow{
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.section--one-col{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.section--double-col{
+  width: 80%;
+  padding: 0 10%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section--grid{
+  display: grid;
+}
+
+.section--flex{
+  display: flex;
+}

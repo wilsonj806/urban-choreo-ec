@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "build/dist",
-    "rootDir": "src",
+
     "module": "esnext",
     "noEmit": true,
     "jsx": "preserve",

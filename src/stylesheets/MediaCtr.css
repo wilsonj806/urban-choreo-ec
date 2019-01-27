@@ -1,0 +1,28 @@
+.media--sm{
+  width: 30%;
+}
+
+.media--md{
+  width: 45%;
+}
+
+.media--lg{
+  width: 65%;
+}
+
+.media > *{
+  max-width: 100%;
+  height: auto;
+}
+
+.media{
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media--video-std > * {
+  max-width: 100%;
+  height: 315px;
+}
