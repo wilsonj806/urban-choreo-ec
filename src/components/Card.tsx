@@ -1,5 +1,5 @@
 import React, { ReactChild, ReactNode, Component } from 'react';
-import { isObject, isContainer } from './helpers/typeCheck';
+import { isContainer } from './helpers/typeCheck';
 import '../stylesheets/Card.css';
 
 interface Props {
@@ -9,9 +9,9 @@ interface Props {
 };
 
 type BasicCard = {
-  header: ReactChild,
+  header: ReactChild | null,
   media?: ReactChild,
-  content: ReactChild,
+  content: ReactChild | null,
   actions?: ReactChild
 };
 

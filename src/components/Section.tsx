@@ -1,5 +1,6 @@
 import React, { ReactChild, ReactNode, Component, Children } from 'react';
 import { Card } from '../components/Card';
+import { MediaCtr } from './MediaCtr';
 import { isContainer } from './helpers/typeCheck';
 import '../stylesheets/Section.css';
 

@@ -1,0 +1,22 @@
+.media--sm{
+  width: 30%;
+}
+
+.media--md{
+  width: 45%;
+}
+
+.media--lg{
+  width: 65%;
+}
+
+.media > *{
+  max-width: 100%;
+  height: auto;
+}
+
+.media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

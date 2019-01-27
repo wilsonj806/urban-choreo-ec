@@ -1,7 +1,5 @@
 .card{
   width: 33%;
-  border: 1px solid grey;
-  background: white;
 }
 
 .card__header{
@@ -13,33 +11,40 @@
 .card__media{
   width: 48%;
   margin: 0 5px;
+  align-self: center;
 }
 
 .card__media img{
   max-width: 100%;
+  max-height: 65vh;
   height: auto;
 }
 
 .card__content{
-  width: 48%;
+  max-width: 50%;
   margin: 0 5px;
 }
+
+/* NOTE Card Modifiers */
 
 .card--shadow{
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 .card--basic{
+  border: 1px solid grey;
+  background: white;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
 }
 
-.card--grid{
-  display: grid;
-}
-
-.card--flex{
+.card--lg-no-border{
+  min-width: 65%;
+  background: rgba(255, 255, 255, 0.5);
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }

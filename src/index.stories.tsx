@@ -7,6 +7,7 @@ import { storiesOf } from '@storybook/react';
 // NOTE Components
 import { Nav } from './components/Nav';
 import { Card } from './components/Card';
+import { MediaCtr } from './components/MediaCtr';
 import { Section } from './components/Section';
 
 // NOTE Mid-level Templates
@@ -64,6 +65,22 @@ storiesOf('Low Level Component/ Nav', module)
           </Nav>
         </BrowserRouter>
     )});
+
+storiesOf('Low Level Component/Container', module)
+  .add('should throw', () => {
+    return(
+      <MediaCtr>
+        stirng
+      </MediaCtr>
+    )
+  })
+  .add('should render', () => {
+    return(
+      <MediaCtr>
+        <img src='https://material.angular.io/assets/img/examples/shiba2.jpg'></img>
+      </MediaCtr>
+    )
+  })
 
 storiesOf('Low Level Component/ Card', module)
   .add('simple', () => <Card className='card--shadow'>I'm a basic card</Card>)
@@ -247,7 +264,8 @@ storiesOf('Mid level templates/ About Section', module)
     return (
       AboutSec
     )
-  })
+  });
+
 storiesOf('App', module)
   .add('default', () => {
   return (

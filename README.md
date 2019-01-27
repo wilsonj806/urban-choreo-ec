@@ -27,10 +27,11 @@ In addition, this project is meant to be a one week build to push out the basic 
 - Basic components(buttons, headers, etc)
 - Navigation between different "pages"
 - State handling if any
+- CSS and styling
 
 **Version 0.5.0 should have the following done**
-- CSS and styling
 - Any CSS based shapes as specced out in the mockups
+- Full templates for each page
 
 ## Roadmap to v1.0.0
 
@@ -41,7 +42,12 @@ In addition, this project is meant to be a one week build to push out the basic 
 
 ## Cloning instructions
 
-You'll need to have some version of Node.js(and subsequently npm, which is included) installed.
+You'll need to have some version of Node.js(and subsequently npm, which is included) installed. Currently running everything on Node v10.10.0/ NPM v6.4.1 but it should work fine on older versions of Node/ NPM.
+- if you do need to download Node, you can download it through the below links:
+    - [Offical Node site](https://nodejs.org/en/download/)
+    - [Node Version Manager Windows(requires more setup)](https://github.com/coreybutler/nvm-windows)
+    - [Node Version Manager Mac(requires more setup)](https://github.com/creationix/nvm)
+
 
 Clone the repo with your favorite SCM or manually download it
 ```

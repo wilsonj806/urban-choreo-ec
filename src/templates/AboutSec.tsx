@@ -1,11 +1,10 @@
 import React, { ReactChild, ReactNode, Component, Children } from 'react';
 import { Card } from '../components/Card';
+import { MediaCtr } from '../components/MediaCtr';
 import { Section } from '../components/Section';
-import '../stylesheets/Section.css';
-import '../stylesheets/Card.css';
 import '../stylesheets/Heading.css';
 
-const AboutP = (
+const GenericP = (
   <p
     className='p'
   >
@@ -13,18 +12,22 @@ const AboutP = (
   </p>
 )
 
+const GenericMediaCtr = (
+  <MediaCtr
+    className='media--sm'
+  >
+    <img src='https://material.angular.io/assets/img/examples/shiba2.jpg'></img>
+  </MediaCtr>
+)
+
 const AboutCard = (
-  <Card>
+  <Card
+    className='card--lg-no-border'
+  >
     {{
-      header: (
-        <h3
-          className='heading heading--sm'
-        >
-          dab
-        </h3>
-      ),
+      header: (null),
       content: (
-        AboutP
+        [GenericP]
       )
     }}
   </Card>
@@ -33,7 +36,7 @@ const AboutCard = (
 
 const AboutSec = (
   <Section
-    className='section--bg-light'
+    className='section--bg-light section--one-col'
   >
     {
       {
@@ -43,6 +46,9 @@ const AboutSec = (
           >
             About This Page
           </h1>
+        ),
+        media: (
+          GenericMediaCtr
         ),
         card: (AboutCard)
       }
