@@ -13,7 +13,8 @@ interface Props {
 type BasicSect = {
   header: ReactNode,
   media?: ReactChild,
-  card: Card | Card[],
+  card: Card | Card[] | null,
+  custom?: ReactNode,
 };
 
 // TODO make sure it throws when you pass anything besides a <Card/> in the BasicSect.card field
@@ -23,7 +24,7 @@ export class Section extends Component<Props, any> {
     const { children, className } = this.props;
     if (!children) throw new Error('Error expecting children elements');
     if (isContainer<BasicSect>(children, 'card')) {
-      const { header, media, card } = children;
+      const { header, media, card, custom } = children;
       return(
         <section
         className={`section ${className}`}
@@ -31,6 +32,7 @@ export class Section extends Component<Props, any> {
           {header ? <>{header}</>: null}
           {media ? <>{media}</>: null}
           {card ? <>{card}</>: null}
+          {custom ? <>{custom}</>: null}
         </section>
       )
     }

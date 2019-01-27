@@ -1,26 +1,20 @@
 /* NOTE below two imports are REQUIRED
 */
-
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // NOTE Components
-import { Nav } from './components/Nav';
-import { Card } from './components/Card';
-import { MediaCtr } from './components/MediaCtr';
-import { Section } from './components/Section';
+import { Nav } from '../components/Nav';
+import { Card } from '../components/Card';
+import { MediaCtr } from '../components/MediaCtr';
+import { Section } from '../components/Section';
 
-// NOTE Mid-level Templates
+import * as Placeholder from '../templates/Placeholder';
 
-import { AboutCard, AboutSec } from './templates/AboutSec';
-
-// NOTE Pages
-import { App } from './App';
 import { BrowserRouter as BrowserRouter, Route, Link, Prompt, Switch } from 'react-router-dom';
 
-// NOTE import the component itself into the storybook index file you want to test
-// So Node's module.exports, exports an object that you need to call???
-// import { Demo } from '../extra/sample-ts-react/sample';
+const { GenericP, GenericP2, GenericMediaCtr } = Placeholder;
+
 
 storiesOf('Low Level Component/ Nav', module)
   .add('config that throws an error', () => {
@@ -80,7 +74,7 @@ storiesOf('Low Level Component/Container', module)
         <img src='https://material.angular.io/assets/img/examples/shiba2.jpg'></img>
       </MediaCtr>
     )
-  })
+  });
 
 storiesOf('Low Level Component/ Card', module)
   .add('simple', () => <Card className='card--shadow'>I'm a basic card</Card>)
@@ -252,25 +246,29 @@ storiesOf('Low Level Component/ Section', module)
          }}
       </Section>
     )
-});
+  })
+  .add('Double Column layout', () => {
+    return(
+      <Section
+        className='section--double-col section--bg-light'
+      >
+        {{
+          header: (<h1 className='heading--main'>I'm pretty complex</h1>),
+          card: null,
+          custom: [
+            GenericMediaCtr,
+            <Card className='card--basic'
+            >
+              {{heading: null, content: GenericP}}
+            </Card>,
+            <Card className='card--basic'
+            >
+              {{heading: null, content: GenericP2}}
+            </Card>,
+            GenericMediaCtr
+          ]
+        }}
+      </Section>
 
-storiesOf('Mid level templates/ About Section', module)
-  .add('About card', () => {
-    return (
-      AboutCard
     )
   })
-  .add('About section', () => {
-    return (
-      AboutSec
-    )
-  });
-
-storiesOf('App', module)
-  .add('default', () => {
-  return (
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
-  )
-});

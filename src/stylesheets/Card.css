@@ -1,5 +1,8 @@
+/* TODO Fix it so there's an explicit double column card selector rule */
+
 .card{
   width: 33%;
+  margin: 0 10px;
 }
 
 .card__header{
@@ -21,7 +24,8 @@
 }
 
 .card__content{
-  max-width: 50%;
+  min-width: 50%;
+  max-width: 85%;
   margin: 0 5px;
 }
 
@@ -41,7 +45,7 @@
 }
 
 .card--lg-no-border{
-  min-width: 65%;
+  max-width: 70%;
   background: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-flow: row nowrap;

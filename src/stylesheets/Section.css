@@ -21,6 +21,15 @@
   align-items: center;
 }
 
+.section--double-col{
+  width: 80%;
+  padding: 0 10%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .section--grid{
   display: grid;
 }
