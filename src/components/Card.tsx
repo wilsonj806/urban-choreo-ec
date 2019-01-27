@@ -1,25 +1,19 @@
 import React, { ReactChild, ReactNode, Component } from 'react';
-
+import { isObject, isContainer } from './helpers/typeCheck';
 import '../stylesheets/Card.css';
 
 interface Props {
   className?: string,
-  children: React.ReactNode | BasicCard
+  qtyColumns?: number,
+  children: ReactNode | BasicCard
 };
 
 type BasicCard = {
-  qtyColumns?: number,
   header: ReactChild,
   media?: ReactChild,
   content: ReactChild,
   actions?: ReactChild
 };
-
-const isObject = <TypedObj extends object>(value: any): value is TypedObj =>
-  typeof value === 'object' && typeof value !== 'function' && value != undefined;
-
-const isBasicCard = (children: any): children is BasicCard =>
-  isObject(children) && 'content' in children;
 
 export class Card extends React.Component<Props, any> {
   render() {
@@ -27,7 +21,7 @@ export class Card extends React.Component<Props, any> {
 
     if (!children) throw new Error('Erorr expecting children elements');
 
-    if (isBasicCard(children)) {
+    if (isContainer<BasicCard>(children, 'content')) {
       const { header, content, media, actions } = children;
       return(
         <div

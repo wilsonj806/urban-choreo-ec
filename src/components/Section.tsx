@@ -1,24 +1,38 @@
 import React, { ReactChild, ReactNode, Component, Children } from 'react';
 import { Card } from '../components/Card';
+import { isContainer } from './helpers/typeCheck';
 import '../stylesheets/Section.css';
-
-// TODO figure out how to make this expect at least one Card
 
 interface Props {
   className?: string,
-  children: ReactNode,
+  qtyColumns?: number,
+  children: ReactNode | BasicSect,
 };
+
+type BasicSect = {
+  header: ReactNode,
+  media?: ReactChild,
+  card: Card | Card[],
+};
+
+// TODO make sure it throws when you pass anything besides a <Card/> in the BasicSect.card field
 
 export class Section extends Component<Props, any> {
   render() {
     const { children, className } = this.props;
     if (!children) throw new Error('Error expecting children elements');
-    return(
-      <section
+    if (isContainer<BasicSect>(children, 'card')) {
+      const { header, media, card } = children;
+      return(
+        <section
         className={`section ${className}`}
-      >
-        {children}
-      </section>
-    )
+        >
+          {header ? <>{header}</>: null}
+          {media ? <>{media}</>: null}
+          {card ? <>{card}</>: null}
+        </section>
+      )
+    }
+    throw new Error('Error expecting at least one child that\'s a card');
   }
 }
