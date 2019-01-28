@@ -5,6 +5,7 @@
   height: 80px;
   border-radius: 40px;
   background: rgba(155, 30, 185, 0.4);
+  transform: translateX(4rem);
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -14,6 +15,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50px;
+  transform: translate(60px 60px);
   background: rgba(150, 55, 140, 0.4);
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
@@ -34,19 +36,19 @@
   width: 0;
   height: 0;
   background: transparent;
-  border-bottom: 90px solid rgba(190, 30, 30, 0.6);
-  border-right: 235px solid transparent;
-  border-left: 240px solid transparent;
+  border-bottom: 87.5px solid rgba(190, 30, 30, 0.6);
+  border-right: 196.25px solid transparent;
+  border-left: 200px solid transparent;
   border-top: 0;
-  transform: rotate(240deg);
+  transform: rotate(-110deg) translateY(2rem);
+  transform-origin: 40% 78%;
 }
 
 #parallelogram {
   grid-area: parallelogram;
   width: 300px;
   height: 250px;
-  transform: skew(30deg);
-  transform-origin: 100% 100%;
+  transform: skew(20deg) translateX(7%);
   background: rgba(70, 190, 75, 0.4);
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }

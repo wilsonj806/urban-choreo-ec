@@ -3,7 +3,7 @@ import './stylesheets/App.css';
 import { BrowserRouter as BrowserRouter, Route, Link, Prompt, Switch } from 'react-router-dom';
 
 
-import { Nav } from './components/Nav';
+import { Nav } from './components/NavBar';
 import { About } from './pages/About';
 import { UrbanChoreoEC } from './pages/UrbanChoreoEC';
 import { Landing } from './pages/Landing';
@@ -17,6 +17,7 @@ export class App extends React.Component<any, any> {
           <Nav
             id='nav'
             itemClass='nav__item'
+            isPrimNavBar={true}
           >
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>

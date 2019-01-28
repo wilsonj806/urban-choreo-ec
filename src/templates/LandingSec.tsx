@@ -19,11 +19,11 @@ const LandingCard = (
         </h1>
       ),
       content:(
-        <h6
+        <h4
           className='heading heading--landing heading--subtitle'
         >
           A brief overview
-        </h6>
+        </h4>
       )
     }}
   </Card>

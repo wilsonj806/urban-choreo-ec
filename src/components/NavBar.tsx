@@ -3,15 +3,22 @@ https://github.com/Shopify/polaris-react/blob/master/src/components/Card/Card.ts
 Docs: https://reacttraining.com/react-router/web/example/auth-workflow
 */
 
+/* TODO Figure out a way to make this reusable
+Right now the fact that it automatically puts a <nav> tag in makes it not as reusable */
+
+
 import * as React from 'react';
+import { isUndefinedNull, isNumBoolStr } from './helpers/typeCheck';
+
 import '../stylesheets/Nav.css';
 
 // TODO Add more type guarding so that you can only put ReactRouter.Link components in
 
 interface Props {
-  children: React.ReactNode,
+  isPrimNavBar: boolean,
   id: string,
   itemClass: string,
+  children: React.ReactNode,
 };
 
 
@@ -45,26 +52,24 @@ export class Nav extends React.Component<Props, any> {
 
   render() {
     const listItems = this.renderListItem();
-    const { id } = this.props;
-    return (
+    const { id, isPrimNavBar } = this.props;
+    if (isPrimNavBar === true) {
+      return (
         <>
           <nav
             id={id}
-          >
+            >
             <ul>
               {listItems}
             </ul>
           </nav>
         </>
     );
+    }
+    return (
+      <ul>
+        {listItems}
+      </ul>
+    )
   }
-}
-
-
-// Simple type checking
-const isUndefinedNull = (ele: any): ele is null | undefined => {
-  return typeof ele === null || typeof ele === undefined;
-}
-const isNumBoolStr = (ele: any): ele is number | boolean | string=> {
-  return typeof ele === 'number' || typeof ele === 'boolean' || typeof ele === 'string';
 }

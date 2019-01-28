@@ -4,7 +4,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // NOTE Components
-import { Nav } from '../components/Nav';
+import { Nav } from '../components/NavBar';
 import { Card } from '../components/Card';
 import { MediaCtr } from '../components/MediaCtr';
 import { Section } from '../components/Section';
@@ -16,12 +16,13 @@ import { BrowserRouter as BrowserRouter, Route, Link, Prompt, Switch } from 'rea
 const { GenericP, GenericP2, GenericMediaCtr } = Placeholder;
 
 
-storiesOf('Low Level Component/ Nav', module)
+storiesOf('Low Level Component/ Primary Nav Bar', module)
   .add('config that throws an error', () => {
     return (
     <Nav
       id='nav'
       itemClass='nav__item'
+      isPrimNavBar={true}
     >
       hi
     </Nav>
@@ -31,6 +32,7 @@ storiesOf('Low Level Component/ Nav', module)
       <Nav
         id='nav'
         itemClass='nav__item'
+        isPrimNavBar={true}
       >
         <span>hi</span>
       </Nav>
@@ -40,17 +42,19 @@ storiesOf('Low Level Component/ Nav', module)
       <Nav
         id='nav'
         itemClass='nav__item'
+        isPrimNavBar={true}
       >
         <span>hi</span>
         <span>hi</span>
       </Nav>
     )})
-    .add('with React Router', () => {
+    .add('Nav Bar with React Router', () => {
       return (
         <BrowserRouter>
           <Nav
             id='nav'
             itemClass='nav__item'
+            isPrimNavBar={true}
           >
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
@@ -58,7 +62,44 @@ storiesOf('Low Level Component/ Nav', module)
             <Link to='/references'>References</Link>
           </Nav>
         </BrowserRouter>
-    )});
+)});
+
+storiesOf('Low Level Component/ Secondary Nav Component', module)
+  .add('config that throws an error', () => {
+    return (
+    <Nav
+      id=''
+      itemClass='content-list__item'
+      isPrimNavBar={false}
+    >
+      hi
+    </Nav>
+    )})
+  .add('span elements', () => {
+    return (
+    <Nav
+      id=''
+      itemClass='content-list__item'
+      isPrimNavBar={false}
+    >
+      <button>Elements</button>
+      <button>Prelude NY</button>
+      <button>Defining Rythym</button>
+      <button>Prelude EC</button>
+    </Nav>
+  )})
+  .add('Browser Router config', () => {
+  return (
+    <BrowserRouter>
+      <Nav
+        id='nav--competitions'
+        itemClass='content-list__item'
+        isPrimNavBar={false}
+      >
+        hi
+      </Nav>
+    </BrowserRouter>
+  )});
 
 storiesOf('Low Level Component/Container', module)
   .add('should throw', () => {

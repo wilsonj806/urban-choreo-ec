@@ -40,4 +40,20 @@ const Video = (
   </MediaCtr>
 )
 
-export { GenericP, GenericP2, GenericMediaCtr, Video };
+const Video2 = (
+  <MediaCtr
+  className='media--video-std'
+  >
+    <iframe
+      width="560"
+      height="315"
+      src="https://youtube.com/embed/Tnv2rAOV2ss"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen="true"
+      >
+    </iframe>
+  </MediaCtr>
+)
+
+export { GenericP, GenericP2, GenericMediaCtr, Video, Video2 };
