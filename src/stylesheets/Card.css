@@ -46,7 +46,6 @@
 
 .card--landing{
   width: 15%;
-  border: 1px solid black;
   background: transparent;
   display: flex;
   flex-flow: column nowrap;

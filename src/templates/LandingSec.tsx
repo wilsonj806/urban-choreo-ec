@@ -4,7 +4,6 @@ import { Section } from '../components/Section';
 import { MediaCtr } from '../components/MediaCtr';
 
 
-import '../stylesheets/Landing.css';
 import '../stylesheets/Shapes.css';
 import '../stylesheets/Heading.css';
 
@@ -21,7 +20,7 @@ const LandingCard = (
       ),
       content:(
         <h6
-          className='heading heading--xs'
+          className='heading heading--landing heading--subtitle'
         >
           A brief overview
         </h6>
@@ -44,6 +43,18 @@ const LandingShapes = (
   </MediaCtr>
 )
 
+const LandingSec = (
+  <Section
+    className='section--landing'
+  >
+    {{
+      header: null,
+      card: (LandingCard),
+      custom: LandingShapes
+    }}
+  </Section>
+)
 
 
-export { LandingCard, LandingShapes };
+
+export { LandingCard, LandingShapes, LandingSec };

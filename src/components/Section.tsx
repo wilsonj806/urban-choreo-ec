@@ -11,7 +11,7 @@ interface Props {
 };
 
 type BasicSect = {
-  header: ReactNode,
+  header: ReactNode | null,
   media?: ReactChild,
   card: Card | Card[] | null,
   custom?: ReactNode,

@@ -3,14 +3,15 @@
 }
 
 .heading--landing{
-  font-size: 1.65rem;
+  /* font-size: 1.65rem; */
   text-align: center;
+}
+
+.heading--subtitle{
+  margin-left: 30px;
 }
 
 .heading--main{
   width: 100vw;
-}
-
-.heading--lg{
   text-align: left;
 }

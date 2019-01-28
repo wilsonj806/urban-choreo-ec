@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { LandingCard, LandingShapes } from '../templates/LandingSec';
+import { LandingCard, LandingShapes, LandingSec } from '../templates/LandingSec';
 import { AboutCard, AboutSec } from '../templates/AboutSec';
 import { WhatIsCard, WhatIsSec } from '../templates/WhatIsUC';
 
@@ -19,6 +19,11 @@ storiesOf('Mid level Templates/ Landing Section', module)
   .add('Landing Shapes', () => {
     return (
       LandingShapes
+    )
+  })
+  .add('Landing Section', () => {
+    return (
+      LandingSec
     )
   });
 

@@ -8,6 +8,8 @@ import { About } from './pages/About';
 import { UrbanChoreoEC } from './pages/UrbanChoreoEC';
 import { Landing } from './pages/Landing';
 
+// NOTE The landing page shapes SHOULD persist even if you swap pages 
+
 export class App extends React.Component<any, any> {
   render() {
     return (

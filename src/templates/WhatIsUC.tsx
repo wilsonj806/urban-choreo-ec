@@ -21,7 +21,7 @@ const WhatIsCard = (
 
 const WhatIsSec = (
   <Section
-    className='section--double-col-rev'
+    className='section--double-col-rev section--bg-transparent'
     qtyColumns={2}
   >
     {{
