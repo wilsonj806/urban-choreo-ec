@@ -22,17 +22,17 @@ const AboutCard = (
 
 const AboutSec = (
   <Section
-    className='section--bg-light section--double-col'
+    className='section--bg-transparent section--double-col'
     qtyColumns={2}
   >
     {
       {
         header: (
-          <h1
+          <h2
             className='heading--main'
           >
             About This Page
-          </h1>
+          </h2>
         ),
         media: (
           GenericMediaCtr

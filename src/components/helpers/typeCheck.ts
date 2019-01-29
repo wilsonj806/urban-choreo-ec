@@ -4,7 +4,24 @@ import { Link } from 'react-router-dom';
 const isObject = <TypedObj extends object>(value: any): value is TypedObj =>
   typeof value === 'object' && typeof value !== 'function' && value != undefined;
 
-const isContainer = <T>(children: any, expectedProp: string): children is T => {
+
+/* NOTE below is expecting an object of some expecting property like:
+interface Example {
+  expectedProp: boolean
+}
+const wrongObj = {
+  actually: 33
+}
+const rightObj = {
+  expectedProp: true
+}
+console.log(isContainer(wrongObj)) // expecting false
+console.log(isContainer(rightObj)) // expecting true
+
+Also NOTE  that isContainer<T>() doesn't actually check the inputs
+*/
+
+const isContainer = <T extends object>(children: any, expectedProp: string): children is T => {
   return isObject(children) && expectedProp in children;
 }
 
@@ -15,11 +32,15 @@ const isNumBoolStr = (ele: any): ele is number | boolean | string=> {
   return typeof ele === 'number' || typeof ele === 'boolean' || typeof ele === 'string';
 }
 
-// const isRRLink = <T extends object>(ele: object): ele is T => {
-//   const isReactComp = isObject(ele) && 'type' in ele;
-//   const isRouterLink = 'router' in ele['type'];
-//   return isReactComp && isRouterLink
-// }
+const isRRLink = (ele: any): ele is Link => {
+  console.log(ele.type.name);
+  return ele['type']['name'] === 'Link' || ele['type']['name'] === 'NavLink'
+}
 
 
-export { isObject, isContainer, isUndefinedNull, isNumBoolStr }
+export { isObject,
+  isContainer,
+  isUndefinedNull,
+  isNumBoolStr,
+  isRRLink
+}

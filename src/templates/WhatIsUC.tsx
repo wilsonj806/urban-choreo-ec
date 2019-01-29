@@ -21,11 +21,11 @@ const WhatIsCard = (
 
 const WhatIsSec = (
   <Section
-    className='section--double-col-rev section--bg-transparent'
+    className='section--double-col-rev section--bg-light'
     qtyColumns={2}
   >
     {{
-      header: ( <h1 className='heading--main'>What Is Urban Choreography?</h1>),
+      header: ( <h2 className='heading--main'>What Is Urban Choreography?</h2>),
       media: (Video),
       card: (WhatIsCard)
     }}

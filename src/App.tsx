@@ -5,7 +5,7 @@ import { BrowserRouter as BrowserRouter, Route, Link, Prompt, Switch, NavLink } 
 
 import { Nav } from './components/NavBar';
 import { About } from './pages/About';
-import { UrbanChoreoEC } from './pages/UrbanChoreoEC';
+import { EastCoastChoreo } from './pages/EastCoastChoreo';
 import { Landing } from './pages/Landing';
 import { LandingShapes, } from './templates/LandingSec';
 
@@ -82,10 +82,10 @@ export class App extends React.Component<any, State> {
           </NavLink>
           <NavLink
             key={3}
-            to='/urban-choreo-east-coast'
+            to='/east-coast-choreo'
             onClick={this.toggleHomeState('urbanChoreoEC')}
           >
-            Urban Choreo-East Coast
+            East Coast Choreo
           </NavLink>
         </Nav>
         {LandingShapes}
@@ -94,7 +94,7 @@ export class App extends React.Component<any, State> {
         >
           <Route exact path="/" component={Landing} />
           <Route path="/about" component={About} />
-          <Route path="/urban-choreo-east-coast" component={UrbanChoreoEC} />
+          <Route path="/east-coast-choreo" component={EastCoastChoreo} />
         </div>
       </>
     );

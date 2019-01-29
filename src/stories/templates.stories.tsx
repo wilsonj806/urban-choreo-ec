@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { LandingCard, LandingShapes, LandingSec } from '../templates/LandingSec';
 import { AboutCard, AboutSec } from '../templates/AboutSec';
 import { WhatIsCard, WhatIsSec } from '../templates/WhatIsUC';
-import { ChoreoECCard, ChoreoECSec } from '../templates/EastCoastDescSec';
+import { ChoreoECCard, ChoreoECSec } from '../templates/EastCoastDesc';
 import { CompetitionNav, CompetitionSec } from '../templates/Competitions';
 
 
