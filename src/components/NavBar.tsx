@@ -3,12 +3,9 @@ https://github.com/Shopify/polaris-react/blob/master/src/components/Card/Card.ts
 Docs: https://reacttraining.com/react-router/web/example/auth-workflow
 */
 
-/* TODO Figure out a way to make this reusable
-Right now the fact that it automatically puts a <nav> tag in makes it not as reusable */
-
-
-import * as React from 'react';
-import { isUndefinedNull, isNumBoolStr } from './helpers/typeCheck';
+import React, { ReactChild, ReactNode, Component } from 'react';
+// import { isUndefinedNull, isNumBoolStr, isRRLink } from './helpers/typeCheck';
+// import { Link } from 'react-router-dom';
 
 import '../stylesheets/Nav.css';
 
@@ -16,50 +13,55 @@ import '../stylesheets/Nav.css';
 
 interface Props {
   isPrimNavBar: boolean,
-  id: string,
-  itemClass: string,
-  children: React.ReactNode,
+  id?: string,
+  itemClass?: string,
+  listClass?: string,
+  children: ReactNode,
 };
 
-
-export class Nav extends React.Component<Props, any> {
+export class Nav extends Component<Props, any> {
   renderListItem() {
-    const { children, itemClass } = this.props;
+    const { children, itemClass, isPrimNavBar } = this.props;
     console.dir(children);
-    if (isUndefinedNull(children)) throw new Error('Expecting children components of some kind');
-    if (isNumBoolStr(children)) {
-      throw new Error(`
-      Expecting children that's a React class component/ function component or a JSX fragment
-      `);
-    }
-    if (children instanceof Array) {
+    if (!(children instanceof Array)) throw new Error('Error expecting array of more than one child')
+
+    // const isAllRouterLinks = children.every((ele: any)=>isRRLink(ele));
+    if (isPrimNavBar === true) {
       const listItems = children.map((reactNode: any, i: number) => {
         return (
           <li
-            key={i}
-            className={itemClass}
+          key={i}
+          className={itemClass}
           >
-            {reactNode}
-          </li>
-        )})
-
-        return listItems;
+          {reactNode}
+        </li>
+      )})
+      return listItems;
     }
-    return (
-      <li>{children}</li>
-    )
+    const listItems = children.map((reactNode: any, i: number) => {
+      return (
+        <li
+        key={i}
+        className={itemClass}
+        >
+        {reactNode}
+      </li>
+    )});
+    return listItems;
   }
 
   render() {
     const listItems = this.renderListItem();
-    const { id, isPrimNavBar } = this.props;
+    const { id, isPrimNavBar, listClass } = this.props;
     if (isPrimNavBar === true) {
       return (
         <>
           <nav
             id={id}
             >
-            <ul>
+            <ul
+              className={`${listClass}`}
+            >
               {listItems}
             </ul>
           </nav>
@@ -67,7 +69,9 @@ export class Nav extends React.Component<Props, any> {
     );
     }
     return (
-      <ul>
+      <ul
+        className={`content-list ${listClass}`}
+      >
         {listItems}
       </ul>
     )

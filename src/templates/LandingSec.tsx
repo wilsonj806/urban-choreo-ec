@@ -38,7 +38,9 @@ const LandingShapes = (
     <div id='circle--2'></div>
     <div id='circle--3'></div>
     <div id='triangle--md'></div>
-    <div id='parallelogram'></div>
+    <div className='shape-wrapper'>
+      <div className='parallelogram'></div>
+    </div>
 
   </MediaCtr>
 )
@@ -50,7 +52,6 @@ const LandingSec = (
     {{
       header: null,
       card: (LandingCard),
-      custom: LandingShapes
     }}
   </Section>
 )

@@ -1,30 +1,10 @@
 import * as React from 'react';
-const logo = require('../logo.svg') as string;
+import { LandingSec } from '../templates/LandingSec';
 
 export class Landing extends React.Component<any, any> {
   render() {
     return(
-      <>
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              >
-              Learn React
-            </a>
-          </header>
-        <section>
-          <div>
-            I'm a landing
-          </div>
-        </section>
-      </>
+      LandingSec
     )
   }
 }

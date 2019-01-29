@@ -45,7 +45,10 @@
 }
 
 .card--landing{
-  width: 15%;
+  max-width: 250px;
+  height: 250px;
+  margin: 0 20px;
+  transform: skew(20deg);
   background: transparent;
   display: flex;
   flex-flow: column nowrap;

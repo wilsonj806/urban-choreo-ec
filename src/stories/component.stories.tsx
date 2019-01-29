@@ -22,6 +22,7 @@ storiesOf('Low Level Component/ Primary Nav Bar', module)
     <Nav
       id='nav'
       itemClass='nav__item'
+      listClass='nav__list'
       isPrimNavBar={true}
     >
       hi
@@ -32,6 +33,7 @@ storiesOf('Low Level Component/ Primary Nav Bar', module)
       <Nav
         id='nav'
         itemClass='nav__item'
+        listClass='nav__list'
         isPrimNavBar={true}
       >
         <span>hi</span>
@@ -42,6 +44,7 @@ storiesOf('Low Level Component/ Primary Nav Bar', module)
       <Nav
         id='nav'
         itemClass='nav__item'
+        listClass='nav__list'
         isPrimNavBar={true}
       >
         <span>hi</span>
@@ -54,6 +57,7 @@ storiesOf('Low Level Component/ Primary Nav Bar', module)
           <Nav
             id='nav'
             itemClass='nav__item'
+            listClass='nav__list'
             isPrimNavBar={true}
           >
             <Link to='/'>Home</Link>
@@ -69,7 +73,7 @@ storiesOf('Low Level Component/ Secondary Nav Component', module)
     return (
     <Nav
       id=''
-      itemClass='content-list__item'
+      itemClass='cntnt-list__item'
       isPrimNavBar={false}
     >
       hi
@@ -79,27 +83,15 @@ storiesOf('Low Level Component/ Secondary Nav Component', module)
     return (
     <Nav
       id=''
-      itemClass='content-list__item'
+      itemClass='cntnt-list__item'
       isPrimNavBar={false}
     >
-      <button>Elements</button>
-      <button>Prelude NY</button>
-      <button>Defining Rythym</button>
-      <button>Prelude EC</button>
+      <a href=''>Elements</a>
+      <a href=''>Prelude NY</a>
+      <a href=''>Defining Rythym</a>
+      <a href=''>Prelude EC</a>
     </Nav>
   )})
-  .add('Browser Router config', () => {
-  return (
-    <BrowserRouter>
-      <Nav
-        id='nav--competitions'
-        itemClass='content-list__item'
-        isPrimNavBar={false}
-      >
-        hi
-      </Nav>
-    </BrowserRouter>
-  )});
 
 storiesOf('Low Level Component/Container', module)
   .add('should throw', () => {

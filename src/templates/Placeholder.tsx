@@ -32,10 +32,9 @@ const Video = (
       width="560"
       height="315"
       src="https://www.youtube.com/embed/39J25wTaLaQ"
-      frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen="true"
-      >
+      allowFullScreen={true}
+    >
     </iframe>
   </MediaCtr>
 )
@@ -48,10 +47,9 @@ const Video2 = (
       width="560"
       height="315"
       src="https://youtube.com/embed/Tnv2rAOV2ss"
-      frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen="true"
-      >
+      allowFullScreen={true}
+    >
     </iframe>
   </MediaCtr>
 )

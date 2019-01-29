@@ -3,12 +3,12 @@
 }
 
 .heading--landing{
-  /* font-size: 1.65rem; */
   text-align: center;
+  transform: skew(-20deg);
 }
 
 .heading--subtitle{
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .heading--main{
