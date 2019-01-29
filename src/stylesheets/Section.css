@@ -26,8 +26,6 @@
 }
 
 .section--double-col{
-  width: 80%;
-  padding: 0 10%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -35,8 +33,6 @@
 }
 
 .section--double-col-rev{
-  width: 80%;
-  padding: 0 10%;
   display: flex;
   flex-flow: row-reverse wrap;
   justify-content: space-around;

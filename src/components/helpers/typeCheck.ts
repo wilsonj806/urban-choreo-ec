@@ -37,10 +37,16 @@ const isRRLink = (ele: any): ele is Link => {
   return ele['type']['name'] === 'Link' || ele['type']['name'] === 'NavLink'
 }
 
+const hasKey = <O>(obj: O, key: any): key is keyof O => {
+  return key in obj
+}
 
-export { isObject,
+
+export {
+  isObject,
   isContainer,
   isUndefinedNull,
   isNumBoolStr,
-  isRRLink
+  isRRLink,
+  hasKey
 }

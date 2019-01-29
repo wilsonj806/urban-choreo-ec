@@ -1,0 +1,51 @@
+.comp-grid{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 300px 1fr 1fr ;
+  grid-template-rows: 10rem 1fr 1fr ;
+  grid-row-gap: 1rem ;
+  grid-template-areas:
+    "header header header header header"
+    ". top-left list top-right ."
+    ". bot-left list bot-right ."
+}
+
+.comp-grid--heading{
+  grid-area: header
+}
+
+.comp-grid--TL{
+  grid-area: top-left;
+}
+.comp-grid--TR{
+  grid-area: top-right;
+}
+.comp-grid--BL{
+  grid-area: bot-left
+}
+.comp-grid--BR{
+  grid-area: bot-right;
+}
+
+.comp-grid--center{
+  grid-area: list;
+  position: sticky;
+}
+
+.cntnt--competition{
+  list-style: none;
+  padding:0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cntnt-list__item{
+  margin: 10px 0;
+  font-size: 3rem;
+  text-align: center;
+}

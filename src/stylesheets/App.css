@@ -34,3 +34,16 @@
 iframe{
   border: 0;
 }
+
+article{
+  width: 100vw;
+}
+
+.route-ctr{
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+
+}

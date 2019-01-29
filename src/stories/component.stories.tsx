@@ -154,7 +154,32 @@ storiesOf('Low Level Component/ Card', module)
         }}
       </Card>
     )
-  });
+  })
+  .add('ordered card', () => {
+    return(
+      <Card
+        className='card--shadow card--media-top'
+        order={{0: 'media', 1:'header', 2:'content'}}
+      >
+        {{
+          header: (
+            <>
+              <h2>I'm a fancier card</h2>
+            </>
+          ),
+          media: (
+            <img src='https://material.angular.io/assets/img/examples/shiba2.jpg'></img>
+          ),
+          content: (
+            <>
+              <p>Content here</p>
+            </>
+          )
+        }}
+      </Card>
+    )
+  })
+  ;
 
 storiesOf('Low Level Component/ Section', module)
   .add('should throw', () => {

@@ -79,11 +79,13 @@ export class Nav extends Component<Props, any> {
     );
     }
     return (
-      <ul
-        className={`content-list ${listClass}`}
-      >
-        {listItems}
-      </ul>
+      <>
+        <ul
+          className={`content-list ${listClass}`}
+        >
+          {listItems}
+        </ul>
+      </>
     )
   }
 }

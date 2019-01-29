@@ -1,6 +1,8 @@
 import React, { ReactChild, ReactNode, Component } from 'react';
 import { MediaCtr } from '../components/MediaCtr';
 
+const mediaTopOrder = {0: 'media', 1:'header', 2:'content'};
+
 const GenericP = (
   <p
   key={1}
@@ -56,4 +58,11 @@ const Video2 = (
   </MediaCtr>
 )
 
-export { GenericP, GenericP2, GenericMediaCtr, Video, Video2 };
+export {
+  GenericP,
+  GenericP2,
+  GenericMediaCtr,
+  Video,
+  Video2,
+  mediaTopOrder,
+};

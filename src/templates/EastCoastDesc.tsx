@@ -6,6 +6,7 @@ import '../stylesheets/Heading.css';
 
 const { GenericP, GenericP2, GenericMediaCtr, Video2 } = Placeholder;
 
+// TODO MAKE ARTICLES FULL WIDTH
 
 const ChoreoECCard = (
   <Card
