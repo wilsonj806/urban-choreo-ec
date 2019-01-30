@@ -3,7 +3,7 @@
 .card{
   width: 33%;
   margin: 0 10px;
-  background:  rgb(252, 252, 252);
+  background:  rgb(255, 255, 255);
 }
 
 .card__header{
@@ -42,7 +42,7 @@
 
 .card--lg-no-border{
   max-width: 70%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgb(255, 255, 255);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -51,7 +51,7 @@
 
 .card--media-top{
   width: 20rem;
-  border: 1px solid rgb(196, 196, 196);
+  border: 1px solid rgb(209, 209, 209);
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;

@@ -5,7 +5,7 @@ import { Section } from '../components/Section';
 import '../stylesheets/Heading.css';
 import '../stylesheets/Templates.css';
 
-const { GenericP, GenericP2, GenericMediaCtr } = Placeholder;
+const { WhyCard, GenericMediaCtr } = Placeholder;
 
 const AboutCard = (
   <Card
@@ -14,7 +14,7 @@ const AboutCard = (
     {{
       header: (<h2 className='heading'>Why make this page in the first place  ?</h2>),
       content: (
-        [GenericP]
+        [WhyCard]
       )
     }}
   </Card>
@@ -23,7 +23,7 @@ const AboutCard = (
 
 const AboutSec = (
   <Section
-    className='section--bg-transparent section--double-col'
+    className='section--double-col'
     qtyColumns={2}
   >
     {

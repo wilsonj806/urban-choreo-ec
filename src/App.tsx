@@ -89,7 +89,6 @@ export class App extends React.Component<any, State> {
             East Coast Choreo
           </NavLink>
         </Nav>
-        {LandingShapes}
         <div
           className='route-ctr'
         >

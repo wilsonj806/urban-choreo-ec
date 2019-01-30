@@ -18,7 +18,7 @@ const ElementsCards = (
     {{
       header: (
         <>
-          <h2 className='heading'>Fusion Elements</h2>
+          <h2 className='heading heading--card'>Fusion Elements</h2>
         </>
       ),
       media: (
@@ -26,7 +26,11 @@ const ElementsCards = (
       ),
       content: (
         <>
-          <p>Dance competition hosted by Fusion BU. Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. </p>
+          <p
+            className='p'
+          >
+            Dance competition hosted by Fusion BU in Boston. Usually takes place around April or May and VIBRVNCY handles their videography.
+          </p>
         </>
       )
     }}
@@ -41,7 +45,7 @@ const PreludeNYCard = (
     {{
       header: (
         <>
-          <h2 className='heading'>Prelude NY</h2>
+          <h2 className='heading heading--card'>Prelude NY</h2>
         </>
       ),
       media: (
@@ -49,7 +53,11 @@ const PreludeNYCard = (
       ),
       content: (
         <>
-          <p>Dance competition held by Prelude. Usually held in NYC Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. </p>
+          <p
+            className='p'
+          >
+            Dance competition held by Prelude. Usually hosted in the Bronx in NYC. They also hold an all-styles battle beforehand.
+          </p>
         </>
       )
     }}
@@ -64,7 +72,7 @@ const DRCard = (
     {{
       header: (
         <>
-          <h2 className='heading'>Defining Rythym</h2>
+          <h2 className='heading heading--card'>Defining Rythym</h2>
         </>
       ),
       media: (
@@ -72,7 +80,11 @@ const DRCard = (
       ),
       content: (
         <>
-          <p>Dance competition held in New Jersey. Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. </p>
+          <p
+            className='p'
+          >
+            Dance competition held in New Jersey. This competition is hosted by a student organization in NJIT and usually takes place in November.
+          </p>
         </>
       )
     }}
@@ -87,7 +99,7 @@ const PreludeECCard = (
     {{
       header: (
         <>
-          <h2 className='heading'>Prelude East Coast</h2>
+          <h2 className='heading heading--card'>Prelude East Coast</h2>
         </>
       ),
       media: (
@@ -95,7 +107,11 @@ const PreludeECCard = (
       ),
       content: (
         <>
-          <p>Dance competition held by Prelude, hosted by Project D. Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. </p>
+          <p
+            className='p'
+          >
+            Dance competition held by Prelude, hosted by Project D. Competition takes place in December and Boat and Bridge handles the videography for the event.
+          </p>
         </>
       )
     }}
@@ -104,9 +120,17 @@ const PreludeECCard = (
 
 const CompetitionNav = (
   <Nav
+    id='competition-list'
     isPrimNavBar={false}
     itemClass='cntnt-list__item'
     listClass='cntnt-list--competition'
+    header={(
+      <h3
+        className='heading heading--comp'
+      >
+        Competitions in the East Coast
+      </h3>
+    )}
   >
     <a
       href='https://www.facebook.com/bu.fusion/'
@@ -139,15 +163,15 @@ const CompetitionNav = (
 
 /* NOTE Needs state and need to pass it through props or something similar to track render state
 Assuming its not using React Router's Static Router */
-
+{/* <h2 className='heading comp-grid--heading'>Competitions in the East Coast</h2> */}
 
 const CompetitionSec = (
   <Section
-    className='section--competition section--bg-light comp-grid'
+    className='section--competition comp-grid'
   >
     {{
       header: (
-        <h2 className='heading comp-grid--heading'>Competitions in the East Coast</h2>
+        null
       ),
       media: (
         <MediaCtr

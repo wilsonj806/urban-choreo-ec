@@ -16,6 +16,7 @@ interface Props {
   id?: string,
   itemClass?: string,
   listClass?: string,
+  header?: ReactNode,
   children: ReactNode,
 };
 
@@ -62,15 +63,16 @@ export class Nav extends Component<Props, any> {
 
   render() {
     const listItems = this.renderListItem();
-    const { id, isPrimNavBar, listClass } = this.props;
+    const { id, isPrimNavBar, listClass, header } = this.props;
     if (isPrimNavBar === true) {
       return (
         <>
           <nav
             id={id}
-            >
+          >
+            <>{header}</>
             <ul
-              className={`${listClass}`}
+              className={`${listClass ? listClass : null}`}
             >
               {listItems}
             </ul>
@@ -79,13 +81,14 @@ export class Nav extends Component<Props, any> {
     );
     }
     return (
-      <>
+      <div id={`${id ? id : null}`}>
+        { header ? <>{header}</> : null }
         <ul
           className={`content-list ${listClass}`}
         >
           {listItems}
         </ul>
-      </>
+      </div>
     )
   }
 }
