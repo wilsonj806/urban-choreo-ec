@@ -46,6 +46,9 @@ In addition, this project is meant to be a one week build to push out the basic 
 **Version 1.0.0 should have the following done**
 - UI refactoring if any
   - change About page to be a full-width banner with the card
+- Images for backgrounds and cards
+  - landing page should have a background in addition to the current one
+- Dynamic nav bar background color?
 
 ## Cloning instructions
 

@@ -43,6 +43,6 @@
   border-left: 0px solid rgba(99, 99, 99, 0.5);
 }
 .nav__item:last-child:hover {
-  padding: 10px 9px;
+  padding: 10px 9px 10px 8px;
   border-right: 1px solid rgba(99, 99, 99, 0);
 }
