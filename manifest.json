@@ -1,7 +1,8 @@
 {
-  "short_name": "EC Choreo Page",
-  "name": "Urban Choreography In the East Coast",
+  "short_name": "EC Urban Choreo",
+  "name": "Urban Choreo East Coast",
   "icons": [
+
   ],
   "start_url": ".",
   "display": "standalone",

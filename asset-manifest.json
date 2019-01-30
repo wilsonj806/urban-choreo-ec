@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.6c45c59f.chunk.css",
-  "main.js": "/static/js/main.8ca34baa.chunk.js",
-  "main.js.map": "/static/js/main.8ca34baa.chunk.js.map",
-  "static/js/1.b92c8b96.chunk.js": "/static/js/1.b92c8b96.chunk.js",
-  "static/js/1.b92c8b96.chunk.js.map": "/static/js/1.b92c8b96.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.6c45c59f.chunk.css.map": "/static/css/main.6c45c59f.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.c0523a8636a0c98cc2570e9d1d055987.js": "/precache-manifest.c0523a8636a0c98cc2570e9d1d055987.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/urban-choreo-ec/static/css/main.6c45c59f.chunk.css",
+  "main.js": "/urban-choreo-ec/static/js/main.8ca34baa.chunk.js",
+  "main.js.map": "/urban-choreo-ec/static/js/main.8ca34baa.chunk.js.map",
+  "static/js/1.b92c8b96.chunk.js": "/urban-choreo-ec/static/js/1.b92c8b96.chunk.js",
+  "static/js/1.b92c8b96.chunk.js.map": "/urban-choreo-ec/static/js/1.b92c8b96.chunk.js.map",
+  "runtime~main.js": "/urban-choreo-ec/static/js/runtime~main.d9098ec0.js",
+  "runtime~main.js.map": "/urban-choreo-ec/static/js/runtime~main.d9098ec0.js.map",
+  "static/css/main.6c45c59f.chunk.css.map": "/urban-choreo-ec/static/css/main.6c45c59f.chunk.css.map",
+  "index.html": "/urban-choreo-ec/index.html",
+  "precache-manifest.fc1a5156bb51925316f72cc5b2007b28.js": "/urban-choreo-ec/precache-manifest.fc1a5156bb51925316f72cc5b2007b28.js",
+  "service-worker.js": "/urban-choreo-ec/service-worker.js"
 }
