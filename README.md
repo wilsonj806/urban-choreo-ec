@@ -15,6 +15,10 @@
 
 This is a Single Page App mean to be an article/ series of articles describing the urban choreography community in the East Coast/ NYC Tri-State Area.
 
+## Other documentation
+
+- [TypeScript notes](./doc/typescript-notes.md)
+
 ## Goals
 
 The goal of this project is to gain more familiarity with React, and the related tools/ libraries relevant to React, by pushing out a fairly simple Single Page App. Said tools include React Router, Storybook, TypeScript, and Jest/ Enzyme.
@@ -31,14 +35,20 @@ In addition, this project is meant to be a one week build to push out the basic 
 **Version 0.5.0 should have the following done**
 - Any CSS based shapes as specced out in the mockups
 - Full templates for 75% of the necessary pages
-- Bonus points for implementing the list of teams or the list of competitions part of the page without using React Router
 
 ## Roadmap to v1.0.0
 
 **Version 0.75.0 should have the following done**
-
+- State handling if any
+- Implement the teams list and competitions
+- Bonus points for implementing the list of teams or the list of competitions part of the page without using React Router
 
 **Version 1.0.0 should have the following done**
+- UI refactoring if any
+  - change About page to be a full-width banner with the card
+- Images for backgrounds and cards
+  - landing page should have a background in addition to the current one
+- Dynamic nav bar background color?
 
 ## Cloning instructions
 

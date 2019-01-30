@@ -1,6 +1,7 @@
 .heading{
+  font-family: 'Liberation Sans', Arial sans-serif;
   width: 100%;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 .heading--subtitle{
@@ -11,4 +12,10 @@
   width: 100vw;
   text-align: left;
   font-size: 2rem;
+  margin: 0px 0 15px 0;
+}
+
+
+.heading--card{
+  margin: 0;
 }

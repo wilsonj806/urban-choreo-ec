@@ -6,11 +6,7 @@
 }
 
 .section--bg-light{
-  background: rgba(120, 152, 233, 0.5);
-}
-
-.section--bg-transparent{
-  background: transparent;
+  background: rgba(160, 201, 160, 0.151);
 }
 
 .section--shadow{

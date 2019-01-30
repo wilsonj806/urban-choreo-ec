@@ -7,7 +7,11 @@
 
 }
 
-.route-ctr :first-child{
+.route-ctr section:first-child{
   margin-top: 0;
   padding-top: 0;
+}
+
+.route-ctr section:last-child{
+  margin-bottom:0;
 }

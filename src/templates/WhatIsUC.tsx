@@ -5,7 +5,7 @@ import { Section } from '../components/Section';
 import '../stylesheets/Heading.css';
 import '../stylesheets/Templates.css';
 
-const { GenericP, GenericP2, GenericMediaCtr, Video } = Placeholder;
+const { WhatIsP1, WhatIsP2, GenericMediaCtr, Video } = Placeholder;
 
 const WhatIsCard = (
   <Card
@@ -14,7 +14,7 @@ const WhatIsCard = (
     {{
       header: (<h3 className='heading'>A Brief Description</h3>),
       content: (
-        [GenericP, GenericP2]
+        [WhatIsP1, WhatIsP2]
       )
     }}
   </Card>

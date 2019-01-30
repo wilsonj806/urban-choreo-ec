@@ -1,3 +1,23 @@
+.media--shapes{
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: var(--shape-pos, absolute);
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  display: grid;
+  grid-template-columns: 20% 20% 20% calc(20% - 50px) 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-areas:
+    ". . . . ."
+    ". circle3 . circle2 ."
+    ". . parallelogram . ."
+    ". triangle . circle1 ."
+    ". . . . ."
+}
+
 .comp-grid{
   position: relative;
   top: 0;
@@ -5,10 +25,11 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 300px 1fr 1fr ;
-  grid-template-rows: 2rem 1fr 1fr ;
-  grid-row-gap: 2rem ;
+  grid-template-rows: 0rem 1fr 1fr ;
+  grid-column-gap: 5rem ;
+  grid-row-gap: 5rem ;
   grid-template-areas:
-    "header header header header header"
+    ". . . . ."
     ". top-left list top-right ."
     ". bot-left list bot-right ."
 }
@@ -32,6 +53,10 @@
 
 .comp-grid--center{
   grid-area: list;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .comp-grid__card{
