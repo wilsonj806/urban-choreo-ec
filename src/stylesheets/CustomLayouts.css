@@ -1,0 +1,39 @@
+.comp-grid{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 300px 1fr 1fr ;
+  grid-template-rows: 2rem 1fr 1fr ;
+  grid-row-gap: 2rem ;
+  grid-template-areas:
+    "header header header header header"
+    ". top-left list top-right ."
+    ". bot-left list bot-right ."
+}
+
+.comp-grid--heading{
+  grid-area: header
+}
+
+.comp-grid--TL{
+  grid-area: top-left;
+}
+.comp-grid--TR{
+  grid-area: top-right;
+}
+.comp-grid--BL{
+  grid-area: bot-left
+}
+.comp-grid--BR{
+  grid-area: bot-right;
+}
+
+.comp-grid--center{
+  grid-area: list;
+}
+
+.comp-grid__card{
+  margin:0 auto;
+}

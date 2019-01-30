@@ -6,6 +6,7 @@ import { MediaCtr } from '../components/MediaCtr';
 
 import '../stylesheets/Shapes.css';
 import '../stylesheets/Heading.css';
+import '../stylesheets/Templates.css';
 
 const LandingCard = (
   <Card

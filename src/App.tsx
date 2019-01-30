@@ -63,6 +63,7 @@ export class App extends React.Component<any, State> {
       <>
         <Nav
           id='nav'
+          listClass='nav__list'
           itemClass='nav__item'
           isPrimNavBar={true}
         >

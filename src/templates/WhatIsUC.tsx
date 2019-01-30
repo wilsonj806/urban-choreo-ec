@@ -3,6 +3,7 @@ import { Card } from '../components/Card';
 import * as Placeholder from './Placeholder';
 import { Section } from '../components/Section';
 import '../stylesheets/Heading.css';
+import '../stylesheets/Templates.css';
 
 const { GenericP, GenericP2, GenericMediaCtr, Video } = Placeholder;
 
@@ -25,7 +26,13 @@ const WhatIsSec = (
     qtyColumns={2}
   >
     {{
-      header: ( <h2 className='heading--main'>What Is Urban Choreography?</h2>),
+      header: (
+        <h2
+          className='heading'
+        >
+          What Is Urban Choreography?
+        </h2>
+        ),
       media: (Video),
       card: (WhatIsCard)
     }}

@@ -1,51 +1,94 @@
-.comp-grid{
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 300px 1fr 1fr ;
-  grid-template-rows: 10rem 1fr 1fr ;
-  grid-row-gap: 1rem ;
-  grid-template-areas:
-    "header header header header header"
-    ". top-left list top-right ."
-    ". bot-left list bot-right ."
+:root{
+  --shape-pos: absolute;
 }
 
-.comp-grid--heading{
-  grid-area: header
+
+iframe{
+  border: 0
 }
 
-.comp-grid--TL{
-  grid-area: top-left;
-}
-.comp-grid--TR{
-  grid-area: top-right;
-}
-.comp-grid--BL{
-  grid-area: bot-left
-}
-.comp-grid--BR{
-  grid-area: bot-right;
+.heading--landing{
+  text-align: center;
+  transform: skew(-20deg);
 }
 
-.comp-grid--center{
-  grid-area: list;
-  position: sticky;
-}
-
-.cntnt--competition{
-  list-style: none;
-  padding:0;
+.section--one-col{
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 
+.section--double-col{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section--double-col-rev{
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.section--landing{
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media--shapes{
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: var(--shape-pos, absolute);
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  display: grid;
+  grid-template-columns: 20% 20% 20% calc(20% - 50px) 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-areas:
+    ". . . . ."
+    ". circle3 . circle2 ."
+    ". . parallelogram . ."
+    ". triangle . circle1 ."
+    ". . . . ."
+}
+
+.cntnt-list--competition{
+  list-style: none;
+  margin: 0;
+  padding:0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: rgb(252, 252, 252);
+  border: 1px solid rgba(211, 211, 211, 0.2);
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
+
+}
+
 .cntnt-list__item{
   margin: 10px 0;
   font-size: 3rem;
   text-align: center;
+}
+.cntnt-list__item a{
+  font-family: 'Helvetica', Arial sans-serif;
+  text-decoration: none;
+  color: #187945;
+}
+.cntnt-list__item a:hover{
+  color: #05331a;
+  font-weight: 550;
 }

@@ -6,18 +6,19 @@ import { Section } from '../components/Section';
 import * as Placeholder from './Placeholder';
 import '../stylesheets/Heading.css';
 import '../stylesheets/Templates.css';
+import '../stylesheets/CustomLayouts.css';
 
 
 
 const ElementsCards = (
   <Card
-    className='card--shadow card--media-top comp-grid--TL'
+    className='comp-grid__card card--media-top comp-grid--TL'
     order={Placeholder.mediaTopOrder}
   >
     {{
       header: (
         <>
-          <h2>Fusion Elements</h2>
+          <h2 className='heading'>Fusion Elements</h2>
         </>
       ),
       media: (
@@ -25,7 +26,7 @@ const ElementsCards = (
       ),
       content: (
         <>
-          <p>Dance competition hosted by Fusion BU. Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. Cras gravida eget risus et euismod. Vivamus imperdiet ligula a arcu aliquet bibendum id sed metus. Integer sed ornare sem, a laoreet erat. Suspendisse potenti. Nullam at dolor faucibus, commodo nunc quis, tristique justo. Maecenas sagittis convallis quam, nec efficitur nisi. Sed viverra tellus non consequat aliquet.  .</p>
+          <p>Dance competition hosted by Fusion BU. Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. </p>
         </>
       )
     }}
@@ -34,13 +35,13 @@ const ElementsCards = (
 
 const PreludeNYCard = (
   <Card
-    className='card--shadow card--media-top comp-grid--TR'
+    className='comp-grid__card card--media-top comp-grid--TR'
     order={Placeholder.mediaTopOrder}
   >
     {{
       header: (
         <>
-          <h2>Prelude NY</h2>
+          <h2 className='heading'>Prelude NY</h2>
         </>
       ),
       media: (
@@ -48,7 +49,7 @@ const PreludeNYCard = (
       ),
       content: (
         <>
-          <p>Dance competition held by Prelude. Usually held in NYC Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. Cras gravida eget risus et euismod. Vivamus imperdiet ligula a arcu aliquet bibendum id sed metus. Integer sed ornare sem, a laoreet erat. Suspendisse potenti. Nullam at dolor faucibus, commodo nunc quis, tristique justo. Maecenas sagittis convallis quam, nec efficitur nisi. Sed viverra tellus non consequat aliquet.  .</p>
+          <p>Dance competition held by Prelude. Usually held in NYC Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. </p>
         </>
       )
     }}
@@ -57,13 +58,13 @@ const PreludeNYCard = (
 
 const DRCard = (
   <Card
-    className='card--shadow card--media-top comp-grid--BL'
+    className='comp-grid__card card--media-top comp-grid--BL'
     order={Placeholder.mediaTopOrder}
   >
     {{
       header: (
         <>
-          <h2>Defining Rythym</h2>
+          <h2 className='heading'>Defining Rythym</h2>
         </>
       ),
       media: (
@@ -71,7 +72,7 @@ const DRCard = (
       ),
       content: (
         <>
-          <p>Dance competition held in New Jersey. Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. Cras gravida eget risus et euismod. Vivamus imperdiet ligula a arcu aliquet bibendum id sed metus. Integer sed ornare sem, a laoreet erat. Suspendisse potenti. Nullam at dolor faucibus, commodo nunc quis, tristique justo. Maecenas sagittis convallis quam, nec efficitur nisi. Sed viverra tellus non consequat aliquet.  .</p>
+          <p>Dance competition held in New Jersey. Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. </p>
         </>
       )
     }}
@@ -80,13 +81,13 @@ const DRCard = (
 
 const PreludeECCard = (
   <Card
-    className='card--shadow card--media-top comp-grid--BR'
+    className='comp-grid__card card--media-top comp-grid--BR'
     order={Placeholder.mediaTopOrder}
   >
     {{
       header: (
         <>
-          <h2>Prelude East Coast</h2>
+          <h2 className='heading'>Prelude East Coast</h2>
         </>
       ),
       media: (
@@ -94,7 +95,7 @@ const PreludeECCard = (
       ),
       content: (
         <>
-          <p>Dance competition held by Prelude, hosted by Project D. Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. Cras gravida eget risus et euismod. Vivamus imperdiet ligula a arcu aliquet bibendum id sed metus. Integer sed ornare sem, a laoreet erat. Suspendisse potenti. Nullam at dolor faucibus, commodo nunc quis, tristique justo. Maecenas sagittis convallis quam, nec efficitur nisi. Sed viverra tellus non consequat aliquet.  .</p>
+          <p>Dance competition held by Prelude, hosted by Project D. Phasellus lacinia fermentum enim, in varius est tincidunt at. Fusce ultricies nibh ut faucibus fringilla. </p>
         </>
       )
     }}
@@ -105,7 +106,7 @@ const CompetitionNav = (
   <Nav
     isPrimNavBar={false}
     itemClass='cntnt-list__item'
-    listClass='cntnt--competition'
+    listClass='cntnt-list--competition'
   >
     <a
       href='https://www.facebook.com/bu.fusion/'
@@ -142,11 +143,11 @@ Assuming its not using React Router's Static Router */
 
 const CompetitionSec = (
   <Section
-    className='section--competition comp-grid'
+    className='section--competition section--bg-light comp-grid'
   >
     {{
       header: (
-        <h2 className='heading heading--main comp-grid--heading'>Competitions in the East Coast</h2>
+        <h2 className='heading comp-grid--heading'>Competitions in the East Coast</h2>
       ),
       media: (
         <MediaCtr

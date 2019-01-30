@@ -3,6 +3,7 @@ import { Card } from '../components/Card';
 import * as Placeholder from './Placeholder';
 import { Section } from '../components/Section';
 import '../stylesheets/Heading.css';
+import '../stylesheets/Templates.css';
 
 const { GenericP, GenericP2, GenericMediaCtr, Video2 } = Placeholder;
 
@@ -26,7 +27,7 @@ const ChoreoECSec = (
     className='section--double-col'
   >
     {{
-      header: (<h2 className='heading heading--main'>Urban Choreography in the East Coast</h2>),
+      header: (<h1 className='heading heading--main'>Urban Choreography in the East Coast</h1>),
       media: (Video2),
       card: (ChoreoECCard)
     }}

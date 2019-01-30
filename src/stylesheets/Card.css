@@ -3,6 +3,7 @@
 .card{
   width: 33%;
   margin: 0 10px;
+  background:  rgb(252, 252, 252);
 }
 
 .card__header{
@@ -38,17 +39,6 @@
   align-items: flex-start;
 }
 
-.card--landing{
-  max-width: 250px;
-  height: 250px;
-  margin: 0 20px;
-  transform: skew(20deg);
-  background: transparent;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
 
 .card--lg-no-border{
   max-width: 70%;
@@ -61,11 +51,12 @@
 
 .card--media-top{
   width: 20rem;
-  border: 1px solid rgb(211, 211, 211);
+  border: 1px solid rgb(196, 196, 196);
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* NOTE Modifier based sizing */

@@ -17,35 +17,3 @@
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
-
-.section--one-col{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.section--double-col{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.section--double-col-rev{
-  display: flex;
-  flex-flow: row-reverse wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-
-.section--landing{
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

@@ -1,10 +1,6 @@
 .heading{
   width: 100%;
-}
-
-.heading--landing{
-  text-align: center;
-  transform: skew(-20deg);
+  padding: 0 20px;
 }
 
 .heading--subtitle{
@@ -14,4 +10,5 @@
 .heading--main{
   width: 100vw;
   text-align: left;
+  font-size: 2rem;
 }
