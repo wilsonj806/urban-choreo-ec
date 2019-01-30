@@ -6,34 +6,14 @@
 }
 
 .section--bg-light{
-  background: rgb(235, 235, 235);
+  background: rgba(120, 152, 233, 0.5);
+}
+
+.section--bg-transparent{
+  background: transparent;
 }
 
 .section--shadow{
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
-
-.section--one-col{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.section--double-col{
-  width: 80%;
-  padding: 0 10%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.section--grid{
-  display: grid;
-}
-
-.section--flex{
-  display: flex;
-}

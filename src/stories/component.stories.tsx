@@ -4,7 +4,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // NOTE Components
-import { Nav } from '../components/Nav';
+import { Nav } from '../components/NavBar';
 import { Card } from '../components/Card';
 import { MediaCtr } from '../components/MediaCtr';
 import { Section } from '../components/Section';
@@ -16,12 +16,14 @@ import { BrowserRouter as BrowserRouter, Route, Link, Prompt, Switch } from 'rea
 const { GenericP, GenericP2, GenericMediaCtr } = Placeholder;
 
 
-storiesOf('Low Level Component/ Nav', module)
+storiesOf('Low Level Component/ Primary Nav Bar', module)
   .add('config that throws an error', () => {
     return (
     <Nav
       id='nav'
       itemClass='nav__item'
+      listClass='nav__list'
+      isPrimNavBar={true}
     >
       hi
     </Nav>
@@ -31,6 +33,8 @@ storiesOf('Low Level Component/ Nav', module)
       <Nav
         id='nav'
         itemClass='nav__item'
+        listClass='nav__list'
+        isPrimNavBar={true}
       >
         <span>hi</span>
       </Nav>
@@ -40,17 +44,21 @@ storiesOf('Low Level Component/ Nav', module)
       <Nav
         id='nav'
         itemClass='nav__item'
+        listClass='nav__list'
+        isPrimNavBar={true}
       >
         <span>hi</span>
         <span>hi</span>
       </Nav>
     )})
-    .add('with React Router', () => {
+    .add('Nav Bar with React Router', () => {
       return (
         <BrowserRouter>
           <Nav
             id='nav'
             itemClass='nav__item'
+            listClass='nav__list'
+            isPrimNavBar={true}
           >
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
@@ -58,7 +66,32 @@ storiesOf('Low Level Component/ Nav', module)
             <Link to='/references'>References</Link>
           </Nav>
         </BrowserRouter>
-    )});
+)});
+
+storiesOf('Low Level Component/ Secondary Nav Component', module)
+  .add('config that throws an error', () => {
+    return (
+    <Nav
+      id=''
+      itemClass='cntnt-list__item'
+      isPrimNavBar={false}
+    >
+      hi
+    </Nav>
+    )})
+  .add('span elements', () => {
+    return (
+    <Nav
+      id=''
+      itemClass='cntnt-list__item'
+      isPrimNavBar={false}
+    >
+      <a href=''>Elements</a>
+      <a href=''>Prelude NY</a>
+      <a href=''>Defining Rythym</a>
+      <a href=''>Prelude EC</a>
+    </Nav>
+  )})
 
 storiesOf('Low Level Component/Container', module)
   .add('should throw', () => {
@@ -121,7 +154,32 @@ storiesOf('Low Level Component/ Card', module)
         }}
       </Card>
     )
-  });
+  })
+  .add('ordered card', () => {
+    return(
+      <Card
+        className='card--shadow card--media-top'
+        order={{0: 'media', 1:'header', 2:'content'}}
+      >
+        {{
+          header: (
+            <>
+              <h2>I'm a fancier card</h2>
+            </>
+          ),
+          media: (
+            <img src='https://material.angular.io/assets/img/examples/shiba2.jpg'></img>
+          ),
+          content: (
+            <>
+              <p>Content here</p>
+            </>
+          )
+        }}
+      </Card>
+    )
+  })
+  ;
 
 storiesOf('Low Level Component/ Section', module)
   .add('should throw', () => {

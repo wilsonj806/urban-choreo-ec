@@ -3,6 +3,7 @@ import { Card } from '../components/Card';
 import * as Placeholder from './Placeholder';
 import { Section } from '../components/Section';
 import '../stylesheets/Heading.css';
+import '../stylesheets/Templates.css';
 
 const { GenericP, GenericP2, GenericMediaCtr } = Placeholder;
 
@@ -11,7 +12,7 @@ const AboutCard = (
     className='card--basic'
   >
     {{
-      header: (null),
+      header: (<h2 className='heading'>Why make this page in the first place  ?</h2>),
       content: (
         [GenericP]
       )
@@ -22,13 +23,14 @@ const AboutCard = (
 
 const AboutSec = (
   <Section
-    className='section--bg-light section--double-col'
+    className='section--bg-transparent section--double-col'
+    qtyColumns={2}
   >
     {
       {
         header: (
           <h1
-            className='heading--main'
+            className=' heading heading--main'
           >
             About This Page
           </h1>

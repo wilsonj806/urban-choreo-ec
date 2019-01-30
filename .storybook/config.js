@@ -6,6 +6,8 @@ import { configure } from '@storybook/react';
 function loadStories() {
   require('../src/stories/component.stories.tsx');
   require('../src/stories/templates.stories.tsx');
+  require('../src/stories/pages.stories.tsx');
+  require('../src/stories/app.stories.tsx');
   // You can require as many stories as you need.
 }
 

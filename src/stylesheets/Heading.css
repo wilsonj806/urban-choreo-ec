@@ -1,11 +1,14 @@
 .heading{
   width: 100%;
+  padding: 0 20px;
+}
+
+.heading--subtitle{
+  margin-left: 20px;
 }
 
 .heading--main{
   width: 100vw;
-}
-
-.heading--lg{
   text-align: left;
+  font-size: 2rem;
 }

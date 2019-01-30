@@ -1,0 +1,60 @@
+#circle--1{
+  grid-area: circle1;
+  content: '';
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background: rgba(155, 30, 185, 0.4);
+  transform: translateX(4rem);
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+#circle--2{
+  grid-area: circle2;
+  content: '';
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  transform: translate(60px 60px);
+  background: rgba(150, 55, 140, 0.4);
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+#circle--3{
+  grid-area: circle3;
+  content: '';
+  width: 125px;
+  height: 125px;
+  border-radius: 62.5px;
+  background: rgba(110, 130, 205, 0.4);
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+#triangle--md{
+  grid-area: triangle;
+  content: '';
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-bottom: 87.5px solid rgba(190, 30, 30, 0.6);
+  border-right: 196.25px solid transparent;
+  border-left: 200px solid transparent;
+  border-top: 0;
+  transform: rotate(-110deg) translateY(2rem);
+  transform-origin: 40% 78%;
+}
+
+.parallelogram {
+  width: 300px;
+  height: 250px;
+  transform: skew(20deg);
+  background: rgba(70, 190, 75, 0.4);
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+.shape-wrapper{
+  grid-area: parallelogram;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

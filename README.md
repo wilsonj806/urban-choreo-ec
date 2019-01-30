@@ -30,9 +30,8 @@ In addition, this project is meant to be a one week build to push out the basic 
 
 **Version 0.5.0 should have the following done**
 - Any CSS based shapes as specced out in the mockups
-- Full CSS for each template and page
-- Full templates for each page
-- State handling if any
+- Full templates for 75% of the necessary pages
+- Bonus points for implementing the list of teams or the list of competitions part of the page without using React Router
 
 ## Roadmap to v1.0.0
 
