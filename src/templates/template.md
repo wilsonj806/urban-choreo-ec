@@ -22,3 +22,4 @@ Something else to also mention is that the Urban Choreography/ Urban Dance label
 
 ## [East Coast] ECDescription
 
+The East Coast is where Hip-hop, breaking,  house, and other street styles was born, but urban choreography here only caught on around 2008. However, it's grown quite large in NYC with numerous competing teams, collegiate teams, and even high school teams. There's also a new effort now from choreographers to gain foundations in street styles to enhance their choreography.

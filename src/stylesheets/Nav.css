@@ -18,7 +18,8 @@
 
 .nav__item{
   display: inline-block;
-  margin: 0 10px;
+  margin: 0;
+  padding: 10px 10px;
 }
 
 .nav__item > * {
@@ -30,9 +31,18 @@
   text-decoration: none;
   color: #187945;
 }
-.nav__item > *:hover {
-  margin: 0 8px;
-  border: 2px inset rgba(189, 189, 189, 0.411);
+.nav__item:hover {
+  padding: 10px 8px;
+  border-right: 2px solid rgba(99, 99, 99, 0.25);
+  border-left: 2px solid rgba(99, 99, 99, 0.25);
   background: rgba(166, 206, 161, 0.384);
   color: #0f4b2b;
+}
+.nav__item:first-child:hover {
+  padding: 10px 9px;
+  border-left: 0px solid rgba(99, 99, 99, 0.5);
+}
+.nav__item:last-child:hover {
+  padding: 10px 9px;
+  border-right: 1px solid rgba(99, 99, 99, 0);
 }

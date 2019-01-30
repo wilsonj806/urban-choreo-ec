@@ -36,7 +36,7 @@ const WhyCard = (
     key={1}
     className='p'
   >
-    So as far as I can tell no one has really made a page dedicated to urban choreography in the East Coast yet. It's about the same for the West Coast although everyone there sort of knows each other already. As this project is being done only by me(for now), not every aspect of the East Coast community is going to be covered, and might not be as accurate as it could be. The page only aims to give a general overview of what urban choreography is like here.
+    So, as far as I can tell no one has really made a page dedicated to urban choreography in the East Coast yet. It's about the same for the West Coast although everyone there sort of knows each other already. As this project is being done only by me(for now), not every aspect of the East Coast community is going to be covered, and might not be as accurate as it could be. The page only aims to give a general overview of what urban choreography is like here.
   </p>
 )
 
@@ -63,6 +63,16 @@ const WhatIsP2 = (
       <a href='https://blog.steezy.co/what-is-urban-dance/'>Reference blog post by Steezy.co</a>
     </p>
   </>
+)
+
+// NOTE East Coast page
+
+const ECDesc = (
+  <p
+    className='p'
+  >
+    The East Coast is where Hip-hop, breaking,  house, and other street styles was born, but urban choreography here only caught on around 2008. However, it's grown quite large in NYC with numerous competing teams, collegiate teams, and even high school teams. There's also a new effort now from choreographers to gain foundations in street styles to enhance their choreography.
+  </p>
 )
 
 const Video = (
@@ -102,6 +112,7 @@ export {
   WhyCard,
   WhatIsP1,
   WhatIsP2,
+  ECDesc,
   Video,
   Video2,
   mediaTopOrder,

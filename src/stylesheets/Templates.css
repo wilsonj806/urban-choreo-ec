@@ -14,6 +14,7 @@ iframe{
 .heading--landing{
   text-align: center;
   transform: skew(-20deg);
+  margin:0;
 }
 
 .section--one-col{
@@ -48,8 +49,24 @@ iframe{
   align-items: center;
 }
 
+.card--landing{
+  max-width: 250px;
+  height: 250px;
+  margin: 0 20px;
+  transform: skew(20deg) translateY(-2rem) translateX(1rem);
+  background: transparent;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.section--bg-lin-grad{
+  background: linear-gradient(to bottom, white 30%, rgb(160, 201, 160));
+}
+
+
 .section--competition{
-  background: rgba(255, 253, 160, 0.568);
   padding-bottom: 5%;
 }
 
