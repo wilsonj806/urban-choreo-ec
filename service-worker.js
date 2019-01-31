@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/urban-choreo-ec/precache-manifest.3e6b0e764948f7b37a44fbbdecc9263b.js"
+  "/urban-choreo-ec/precache-manifest.50673986d2f36a63ae928e05e7252a33.js"
 );
 
 workbox.clientsClaim();
