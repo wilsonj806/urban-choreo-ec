@@ -4,6 +4,6 @@ import './stylesheets/index.css';
 import { App } from './App';
 import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root')) as HTMLElement;
+ReactDOM.render(<BrowserRouter basename='/urban-choreo-ec/'><App /></BrowserRouter>, document.getElementById('root')) as HTMLElement;
 
 
