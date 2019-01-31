@@ -1,5 +1,5 @@
 import { ReactElement, Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const isObject = <TypedObj extends object>(value: any): value is TypedObj =>
   typeof value === 'object' && typeof value !== 'function' && value != undefined;
@@ -33,8 +33,11 @@ const isNumBoolStr = (ele: any): ele is number | boolean | string=> {
 }
 
 const isRRLink = (ele: any): ele is Link => {
-  console.log(ele.type.name);
-  return ele['type']['name'] === 'Link' || ele['type']['name'] === 'NavLink'
+  // console.log(ele.type.name);
+  const LinkName: string = Link.name;
+  const NavLinkName: string = NavLink.name;
+
+  return ele['type']['name'] === LinkName || ele['type']['name'] === NavLinkName
 }
 
 const hasKey = <O>(obj: O, key: any): key is keyof O => {
