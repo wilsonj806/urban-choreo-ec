@@ -7,9 +7,7 @@
 ![Top language](https://img.shields.io/github/languages/top/wilsonj806/urban-choreo-ec.svg)
 
 
-- [**Live Site**]()
-  - Note the page is being developed component by component
-  - to see current progress feel free to clone it and run Storybook
+- [**Live Site**](https://wilsonj806.github.io/urban-choreo-ec/)
 
 ## Description
 
